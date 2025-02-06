@@ -16,7 +16,6 @@ local gpsAltId
 local chArmedId
 local armed
 local arm_time = 0 -- timestamp when armed
-local last_waypoint_add_time = 0
 local waypoints_recorded = 0
 local latitude, longitude = 0.0, 0.0
 local altitude = 0.0
@@ -89,7 +88,6 @@ local function bg_func()
 	local elapsed_time = (getTime() - arm_time) / 20 -- units smaller than seconds
 		
 	if armed
-	and elapsed_time > last_waypoint_add_time + 1
 	and gpsLatLon ~= 0
 	and (gpsLatLon.lat ~= latitude or gpsLatLon.lon ~= longitude or altitude_new ~= altitude) then	
 		latitude = gpsLatLon.lat
@@ -106,7 +104,6 @@ local function bg_func()
 		"<trkpt lat='%f' lon='%f'><ele>%f</ele><time>%s</time></trkpt>\n", 
 		latitude, longitude, altitude, timestamp))
 		
-		last_waypoint_add_time = elapsed_time
 		waypoints_recorded = waypoints_recorded + 1
 	end	
 end
@@ -115,15 +112,17 @@ end
 local function run_func()
     lcd.clear()
 	
+	lcd.drawText(5, 0, "GPS logger", MIDSIZE)
+	lcd.drawText(5, 40, "GPS: " .. tostring(latitude) .. ", " .. tostring(longitude), 0)
+	lcd.drawText(5, 50, string.format("altitude %f", altitude), 0)
+	
     if armed then
         local elapsed_time = (getTime() - arm_time) / 100  -- seconds
-		lcd.drawText(5, 00, string.format("REC (waypoints: %d)", waypoints_recorded), 0)
-		lcd.drawText(5, 10, string.format("Time: %d sec", elapsed_time), 0)
+		lcd.drawText(5, 20, string.format("REC (waypoints: %d)", waypoints_recorded), 0)
+		lcd.drawText(5, 30, string.format("Time: %d sec", elapsed_time), 0)
     else
-        lcd.drawText(5, 00, "IDLE", 0)
+        lcd.drawText(5, 20, "IDLE", 0)
     end	
-	lcd.drawText(5, 20, "GPS: " .. tostring(latitude) .. ", " .. tostring(longitude), 0)
-	lcd.drawText(5, 30, string.format("altitude %f", altitude), 0)
     
     return 0
 end
