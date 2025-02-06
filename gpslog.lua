@@ -1,6 +1,14 @@
--- GPS Logger for OpenTX/EdgeTX (RadioMaster)
+-- GPS Logger for EdgeTX (RadioMaster) by Marcin Smidowicz
 -- Logs GPS coordinates for each arm-disarm cycle and saves them as a GPX file
--- Runs as a telemetry script with correct function structure
+
+-- INSTALLATION AND USAGE
+-- 1. Copy gpslog.lua to /SCRIPTS/TELEMETRY.
+-- 2. In model setup / display select screen -> script -> gpslog.
+-- 3. GPS logging will be automatic during arm - disarm period.
+-- 4. if GPS fix is acquired, GPX logs will be saved to /LOGS.
+
+-- Tested with RadioMaster Pocket, BetaFlight 4.5.1 and M100 GPS.
+-- You can freely use and modify this script.
 
 local mid = LCD_W / 2  -- Center alignment for LCD display
 local gpsLatLonId
@@ -113,8 +121,7 @@ local function run_func()
 		lcd.drawText(5, 10, string.format("Time: %d sec", elapsed_time), 0)
     else
         lcd.drawText(5, 00, "IDLE", 0)
-    end
-	
+    end	
 	lcd.drawText(5, 20, "GPS: " .. tostring(latitude) .. ", " .. tostring(longitude), 0)
 	lcd.drawText(5, 30, string.format("altitude %f", altitude), 0)
     
