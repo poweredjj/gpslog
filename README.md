@@ -7,6 +7,8 @@
 3. GPS logging will be automatic during arm - disarm period.
 4. if GPS fix is acquired, GPX logs will be saved to ```/LOGS```.
 
+If GPS data logging frequency is too slow, go to ExpressLRS configurator app and increase ```telemetry ratio``` (from 1/16 to 1/4 or more).
+
 Tested with RadioMaster Pocket, ExpressLRS 3.5.1, BetaFlight 4.5.1 and M100 GPS.
 
 You can freely use and modify this script.
