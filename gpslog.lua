@@ -28,7 +28,6 @@ local function init_func()
     chArmedId = getFieldInfo('ch5').id	
 end
 
-
 local function write_gps_file_header()
 	local dt = getDateTime()		
 	local timestamp = string.format(
