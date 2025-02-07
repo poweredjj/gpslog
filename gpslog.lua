@@ -43,8 +43,7 @@ local function write_gps_file_header()
 end
 
 local function write_gps_file_footer()
-	io.write(log_file, "</trkseg></trk>\n")
-	io.write(log_file, "</gpx>")
+	io.write(log_file, "</trkseg></trk>\n</gpx>")
 end
 
 local function bg_func()
