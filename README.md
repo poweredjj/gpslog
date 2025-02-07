@@ -5,7 +5,7 @@
 1. Copy ```gpslog.lua``` to ```/SCRIPTS/TELEMETRY```.
 2. In model setup / display select screen -> script -> gpslog.
 3. GPS logging will be automatic during arm - disarm period.
-4. if GPS fix is acquired, GPX logs will be saved to ```/LOGS```.
+4. If GPS fix is acquired, GPX logs will be saved to ```/LOGS```.
 
 If GPS data logging frequency is too slow (especially if you are using a slower packet rate), go to ExpressLRS configurator app and increase ```telemetry ratio```.
 
