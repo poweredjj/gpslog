@@ -25,7 +25,7 @@ local gpx_path = ""
 local function init_func()
     gpsLatLonId = getFieldInfo("GPS") and getFieldInfo("GPS").id or nil;
     gpsAltId  = getFieldInfo("Alt") and getFieldInfo("Alt").id or nil;
-	chArmedId = getFieldInfo('ch5').id	
+    chArmedId = getFieldInfo('ch5').id	
 end
 
 
@@ -60,8 +60,7 @@ local function bg_func()
 		tonumber(dt.year), tonumber(dt.mon ), tonumber(dt.day),
 		tonumber(dt.hour), tonumber(dt.min ), tonumber(dt.sec))
 		
-		gpx_path = string.format("/LOGS/gps_log_%s.gpx", timestamp)		
-		
+		gpx_path = string.format("/LOGS/gps_log_%s.gpx", timestamp)			
 		log_file = io.open(gpx_path, "a")	
 		waypoints_recorded = 0
 
@@ -107,7 +106,6 @@ local function bg_func()
 		waypoints_recorded = waypoints_recorded + 1
 	end	
 end
-
 
 local function run_func()
     lcd.clear()
