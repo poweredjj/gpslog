@@ -37,8 +37,7 @@ local function write_gps_file_header()
 	tonumber(dt.hour), tonumber(dt.min ), tonumber(dt.sec))
 		
 	io.write(log_file, "<?xml version='1.0' encoding='UTF-8'?>\n")
-	io.write(log_file, "<gpx version='1.1' creator='EdgeTX Lua Script' xmlns='http://www.topografix.com/GPX/1/1'>\n")
-		
+	io.write(log_file, "<gpx version='1.1' creator='EdgeTX Lua Script' xmlns='http://www.topografix.com/GPX/1/1'>\n")	
 	io.write(log_file, string.format("<metadata><time>%s</time></metadata>\n", timestamp))
 	io.write(log_file, string.format("<trk><name>Flight Log</name><trkseg>\n", timestamp))
 end
