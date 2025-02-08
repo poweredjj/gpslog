@@ -15,3 +15,5 @@ You can freely use and modify this script.
 
 
 <img align="left" width="300" height="300" src="screenshot.png">
+<img align="left" width="300" height="300" src="example_track_preview.jpeg">
+
