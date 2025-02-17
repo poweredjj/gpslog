@@ -9,6 +9,8 @@
 
 If GPS data logging frequency is too slow (especially if you are using a slower packet rate), go to ExpressLRS configurator app and increase ```telemetry ratio```.
 
+Make sure ```telemetry``` is enabled in Betaflight ```receiver``` tab.
+
 Tested with RadioMaster Pocket, ExpressLRS 3.5.1, BetaFlight 4.5.1 and M100 GPS.
 
 You can freely use and modify this script.
