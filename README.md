@@ -11,7 +11,7 @@ If GPS data logging frequency is too slow (especially if you are using a slower 
 
 Make sure ```telemetry``` is enabled in Betaflight ```receiver``` tab.
 
-Tested with RadioMaster Pocket, ExpressLRS 3.5.1, BetaFlight 4.5.1 and M100 GPS.
+Tested with RadioMaster Pocket, ExpressLRS 3.5.4, BetaFlight 4.5.2 and M8 / M10 / M100 GPS.
 
 You can freely use and modify this script.
 
