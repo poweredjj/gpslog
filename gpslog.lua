@@ -1,4 +1,4 @@
--- GPS Logger for EdgeTX (RadioMaster) by Marcin Smidowicz
+-- GPS Logger for EdgeTX (RadioMaster) by Marcin Śmidowicz
 -- Logs GPS coordinates for each arm-disarm cycle and saves them as a GPX file
 
 -- INSTALLATION AND USAGE
@@ -7,7 +7,7 @@
 -- 3. GPS logging will be automatic during arm - disarm period.
 -- 4. if GPS fix is acquired, GPX logs will be saved to /LOGS.
 
--- Tested with RadioMaster Pocket, BetaFlight 4.5.1 and M100 GPS.
+-- Tested with RadioMaster Pocket, BetaFlight 4.5.2 and M8 / M10 / M100 GPS.
 -- You can freely use and modify this script.
 
 local mid = LCD_W / 2  -- Center alignment for LCD display
