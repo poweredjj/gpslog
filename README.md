@@ -1,4 +1,4 @@
-# GPS logger for EdgeTX
+# GPS logger for EdgeTX (bw only)
 For bw screen radios that can use telemetry scripts.
 
 ## INSTALLATION AND USAGE
