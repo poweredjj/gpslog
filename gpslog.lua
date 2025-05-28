@@ -1,4 +1,4 @@
--- GPS Logger for EdgeTX (RadioMaster) by Marcin Śmidowicz
+-- GPS Logger 1.0 for EdgeTX (RadioMaster) by Marcin Śmidowicz
 -- Logs GPS coordinates for each arm-disarm cycle and saves them as a GPX file
 
 -- INSTALLATION AND USAGE
