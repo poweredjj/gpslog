@@ -5,9 +5,9 @@
 -- 1. Copy gpslog.lua to /SCRIPTS/TELEMETRY.
 -- 2. In model setup / display select screen -> script -> gpslog.
 -- 3. GPS logging will be automatic during arm - disarm period.
--- 4. if GPS fix is acquired, GPX logs will be saved to /LOGS.
+-- 4. If GPS fix is acquired, GPX logs will be saved to /LOGS.
 
--- Tested with RadioMaster Pocket, BetaFlight 4.5.2 and M8 / M10 / M100 GPS.
+-- Tested on RadioMaster Pocket / GX12, ExpressLRS / Crossfire, and M8 / M10 / M100 GPS.
 -- You can freely use and modify this script.
 
 local mid = LCD_W / 2  -- Center alignment for LCD display
@@ -80,9 +80,7 @@ local function bg_func()
 	
 	local gpsLatLon = getValue(gpsLatLonId)
 	local altitude_new = getValue(gpsAltId)
-	
-	local elapsed_time = (getTime() - arm_time) / 20 -- units smaller than seconds
-		
+			
 	if armed
 	and gpsLatLon ~= 0
 	and (gpsLatLon.lat ~= latitude or gpsLatLon.lon ~= longitude or altitude_new ~= altitude) then	
