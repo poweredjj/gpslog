@@ -1,5 +1,5 @@
 # GPS logger for EdgeTX
-
+For bw screen radios that can use telemetry scripts.
 
 ## INSTALLATION AND USAGE
 1. Copy ```gpslog.lua``` to ```/SCRIPTS/TELEMETRY```.
