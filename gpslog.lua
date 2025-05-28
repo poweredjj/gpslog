@@ -54,8 +54,8 @@ local function bg_func()
 		local dt = getDateTime()		
 		local timestamp = string.format(
 		"%d-%02d-%02d_%02d_%02d_%02d",
-		tonumber(dt.year), tonumber(dt.mon ), tonumber(dt.day),
-		tonumber(dt.hour), tonumber(dt.min ), tonumber(dt.sec))
+		tonumber(dt.year), tonumber(dt.mon), tonumber(dt.day),
+		tonumber(dt.hour), tonumber(dt.min), tonumber(dt.sec))
 		
 		gpx_path = string.format("/LOGS/gps_log_%s.gpx", timestamp)			
 		log_file = io.open(gpx_path, "a")	
