@@ -13,7 +13,7 @@ If you get an error, go to ```TELEMETRY``` tab and use ```Sensors``` / ```Discov
 
 Make sure ```telemetry``` is enabled in Betaflight ```receiver``` tab.
 
-Tested on RadioMaster Pocket / GX12, ExpressLRS / Crossfire, and M8 / M10 / M100 GPS.
+Tested on RadioMaster Pocket / GX12, ExpressLRS / Crossfire and M8 / M10 / M100 GPS.
 
 You can freely use and modify this script.
 
