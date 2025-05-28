@@ -65,7 +65,7 @@ local function bg_func()
 	end	
 		
 	if not armed and log_file ~= nil then
-		if waypoints_recorded < 2 then -- no point in storing empty logs
+		if waypoints_recorded < 6 then -- no point in storing empty (or very small) logs
 			io.close(log_file)
 			del(gpx_path)	
 		else
